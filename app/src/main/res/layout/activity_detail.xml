@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DetailActivity">
+
+    <ImageView
+        android:id="@+id/imageDetail"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@id/imageBack"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_kopisusu" />
+
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/v_back" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="330dp"
+        android:background="@drawable/ic_background"
+        tools:context=".Activity.MainActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutFoto"
+            android:layout_gravity="center_vertical"
+            tools:context=".Activity.MainActivity">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtNamaItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:paddingStart="10dp"
+                    android:text="Menu"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtNamaKategori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtNamaItem"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingStart="10dp"
+                    android:text="Makanan"
+                    android:textColor="@color/colorGray2"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtHargaItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@id/txtTotal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="10dp"
+                    android:text="Rp. 35000"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtNamaKategori"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="50dp"
+                    android:paddingStart="10dp"
+                    android:text="Harga :"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtHargaItem"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left">
+
+                        <Button
+                            android:id="@+id/btnTambah"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:height="28dp"
+                            android:background="@drawable/ic_radius"
+                            android:onClick="increment"
+                            android:text="+"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="25dp"
+                            android:textStyle="bold"
+                            tools:ignore="OnClick" />
+
+                        <TextView
+                            android:id="@+id/txtQuantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_toRightOf="@id/btnTambah"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="0"
+                            android:textSize="23dp" />
+
+                        <Button
+                            android:id="@+id/btnKurang"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_toRightOf="@id/txtQuantity"
+                            android:height="28dp"
+                            android:background="@drawable/ic_radius"
+                            android:onClick="decrement"
+                            android:text="-"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="25dp"
+                            android:textStyle="bold"
+                            tools:ignore="OnClick" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/imageAddBuy"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/ic_radius_cart" />
+
+                        <ImageView
+                            android:id="@+id/imgshop"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerInParent="true"
+                            android:layout_toLeftOf="@id/txtAdd"
+                            android:src="@drawable/v_shopping" />
+
+                        <TextView
+                            android:id="@+id/txtAdd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:text="Add to Cart"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:id="@+id/progress"
+        android:visibility="visible"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</FrameLayout>

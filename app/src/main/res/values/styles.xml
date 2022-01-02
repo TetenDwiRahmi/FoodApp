@@ -1,0 +1,23 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorYellow2</item>
+    </style>
+    <style name="Menu" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorWhite</item>
+    </style>
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorBlack2</item>
+        <item name="colorPrimaryDark">@color/colorBlack2</item>
+        <item name="colorAccent">@color/colorYellow2</item>
+    </style>
+    <style name="Theme.App" parent="Theme.MaterialComponents" >
+        ...
+        <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView.Colored</item>
+        <item name="colorPrimary">@color/colorBlack2</item>
+        <item name="colorOnPrimary">@color/colorYellow2</item>
+    </style>
+</resources>
